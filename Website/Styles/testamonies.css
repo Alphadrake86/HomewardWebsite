@@ -1,0 +1,21 @@
+.testibox{
+    display: block;
+    text-align: center;
+    width: 90%;
+    max-width: 1200px;
+    margin: 12px auto;
+
+}
+.testibox .red{
+    font-size: 36pt;
+}
+.bar{
+    width: 100%;
+    border: black 1px solid;
+    height: 0;
+    margin: 6px 0;
+}
+img{
+    width: 90%;
+    height: auto;
+}

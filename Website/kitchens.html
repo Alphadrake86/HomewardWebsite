@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Kitchens</title>
+    <link rel="stylesheet" href="/Styles/topbar.css">
+    <link rel="stylesheet" href="/Styles/gallery.css">
+    <!--<script src="galleryscript.js"></script>-->
+</head>
+<body>
+    <div class = "topbar">
+        <div class = "topblock left">
+            <p>
+                <button onclick="window.location.href = '/home.html'">
+                    &lt;&lt; Home
+                </button><br>
+                <button onclick="window.location.href = '/checkoutourwork.html'">
+                    &lt;&lt; Back
+                </button>
+            </p>
+        </div>
+        <img class = "topimg" src="/Images/homeward logo.png" alt="our logo">
+        <div class = "topblock right">
+            <p>
+                <div class = "red">
+                    877-575-0777
+                </div>
+                <div>
+                    info@homeward.biz
+                </div>
+                <button>
+                    Contact us for free quote
+                </button>
+            </p>
+        </div>
+    </div> 
+
+    <div class = "gallerybox">
+        <img id = "img0" class = "slideImg" onload="setslides('/Images/kitchens/')" src="/Images/kitchens/0.jpg">
+
+        <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+        <a class="next" onclick="plusSlides(1)">&#10095;</a>
+    </div>
+</body>
+</html>
