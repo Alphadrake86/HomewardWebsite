@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Interiors</title>
+    <link rel="stylesheet" href="/Styles/topbar.css">
+    <link rel="stylesheet" href="/Styles/gallery.css">
+    <!--<script src="galleryscript.js"></script>-->
+    <script src="/galleryscript.js"></script>
+    <script type="text/javascript">/*
+        window.addEventListener('error', function(e) {
+            console.log(e);
+        }, true);*/
+    </script>
+</head>
+<body>
+    <div class = "topbar">
+        <div class = "topblock left">
+            <p>
+                <button onclick="window.location.href = '/home.html'">
+                    &lt;&lt; Home
+                </button><br>
+                <button onclick="window.location.href = '/checkoutourwork.html'">
+                    &lt;&lt; Back
+                </button>
+            </p>
+        </div>
+        <img class = "topimg" src="/Images/homeward logo.png" alt="our logo">
+        <div class = "topblock right">
+            <p>
+                <div class = "red">
+                    877-575-0777
+                </div>
+                <div>
+                    info@homeward.biz
+                </div>
+                <button onclick="window.location.href = '/contact.html'">
+                    Contact us for free quote
+                </button>
+            </p>
+        </div>
+    </div> 
+
+    <div class = "gallerybox" id = "gallery" onload = "loadSlides('/Images/Interiors/')">
+        <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+        <a class="next" onclick="plusSlides(1)">&#10095;</a>
+        <!--<img id = "img-10" class = "slideImg" src="/Images/Interiors/1.jpg">-->
+    </div>
+    <script>
+        loadSlides("/Images/Interiors/");
+        var slideIndex = 1;
+        showSlides(slideIndex);
+
+        // Next/previous controls
+        function plusSlides(n) {
+        showSlides(slideIndex += n);
+        }
+
+        // Thumbnail image controls
+        function currentSlide(n) {
+        showSlides(slideIndex = n);
+        }
+
+        function showSlides(n) {
+        var i;
+        var slides = document.getElementsByClassName("slideImg");
+        if (n > slides.length) {slideIndex = 1} 
+        if (n < 1) {slideIndex = slides.length}
+        for (i = 0; i < slides.length; i++) {
+            slides[i].style.display = "none"; 
+        }
+
+        slides[slideIndex-1].style.display = "block"; 
+        
+        } 
+    </script>
+
+</body>
+</html>
